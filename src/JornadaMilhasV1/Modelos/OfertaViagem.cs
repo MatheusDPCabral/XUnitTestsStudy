@@ -9,13 +9,15 @@ namespace JornadaMilhasV1.Modelos;
 
 public class OfertaViagem: Valida
 {
-    private double desconto;
-
+    public bool Ativa { get; set; } = true;
     public const double descontoMaximo = 0.7;
     public int Id { get; set; }
     public Rota Rota { get; set; } 
     public Periodo Periodo { get; set; }
     public double Preco { get; set; }
+  
+    
+    private double desconto;
     public double Desconto {
         get => desconto;
         set {
